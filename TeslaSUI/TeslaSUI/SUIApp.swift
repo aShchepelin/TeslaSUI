@@ -1,0 +1,14 @@
+// SUIApp.swift
+// Copyright © RoadMap. All rights reserved.
+
+import SwiftUI
+
+@main
+struct SUIApp: App {
+    var body: some Scene {
+        WindowGroup {
+            CarSettingsView()
+                .environment(\.colorScheme, .dark)
+        }
+    }
+}
