@@ -1,9 +1,5 @@
-//
-//  CarSettingsViewModel.swift
-//  SUI
-//
-//  Created by Александр Андреевич Щепелин on 30.01.2023.
-//
+// CarSettingsViewModel.swift
+// Copyright © RoadMap. All rights reserved.
 
 import Foundation
 

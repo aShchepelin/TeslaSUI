@@ -1,9 +1,5 @@
-//
-//  UIColor+Extension.swift
-//  SUI
-//
-//  Created by Александр Андреевич Щепелин on 30.01.2023.
-//
+// UIColor+Extension.swift
+// Copyright © RoadMap. All rights reserved.
 
 import UIKit
 

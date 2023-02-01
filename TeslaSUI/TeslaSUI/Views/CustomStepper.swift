@@ -1,9 +1,5 @@
-//
-//  CustomStepper.swift
-//  TeslaSUI
-//
-//  Created by Александр Андреевич Щепелин on 01.02.2023.
-//
+// CustomStepper.swift
+// Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
 

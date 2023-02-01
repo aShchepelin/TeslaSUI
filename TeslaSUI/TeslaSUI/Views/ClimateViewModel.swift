@@ -1,9 +1,5 @@
-//
-//  ClimateViewModel.swift
-//  TeslaSUI
-//
-//  Created by Александр Андреевич Щепелин on 31.01.2023.
-//
+// ClimateViewModel.swift
+// Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
 

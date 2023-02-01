@@ -1,9 +1,5 @@
-//
-//  AnimatableGradientModifier.swift
-//  SUI
-//
-//  Created by Александр Андреевич Щепелин on 31.01.2023.
-//
+// AnimatableGradientModifier.swift
+// Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
 
@@ -24,7 +20,6 @@ struct AnimatableGradientModifier: AnimatableModifier {
         for index in 0..<fromGradient.stops.count {
             let fromColor = UIColor(fromGradient.stops[index].color)
             let toColor = UIColor(toGradient.stops[index].color)
-
             gradientColors.append(colorMixer(fromColor: fromColor, toColor: toColor, progress: progress))
         }
 

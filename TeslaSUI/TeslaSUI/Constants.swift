@@ -1,9 +1,5 @@
-//
-//  Constants.swift
-//  SUI
-//
-//  Created by Александр Андреевич Щепелин on 30.01.2023.
-//
+// Constants.swift
+// Copyright © RoadMap. All rights reserved.
 
 /// Константы
 enum Constants {

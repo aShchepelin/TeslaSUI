@@ -1,9 +1,5 @@
-//
-//  NeumorhismNavigationCircleButtonUnselected.swift
-//  TeslaSUI
-//
-//  Created by Александр Андреевич Щепелин on 31.01.2023.
-//
+// NeumorhismNavigationCircleButtonUnselected.swift
+// Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
 

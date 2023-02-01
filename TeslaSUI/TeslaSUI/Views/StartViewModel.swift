@@ -1,9 +1,5 @@
-//
-//  StartViewModel.swift
-//  SUI
-//
-//  Created by Александр Андреевич Щепелин on 31.01.2023.
-//
+// StartViewModel.swift
+// Copyright © RoadMap. All rights reserved.
 
 import Foundation
 

@@ -1,9 +1,5 @@
-//
-//  ButtonImageModifier.swift
-//  TeslaSUI
-//
-//  Created by Александр Андреевич Щепелин on 31.01.2023.
-//
+// ButtonImageModifire.swift
+// Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
 
