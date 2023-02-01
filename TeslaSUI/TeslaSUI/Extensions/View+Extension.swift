@@ -1,9 +1,5 @@
-//
-//  View+Extension.swift
-//  SUI
-//
-//  Created by Александр Андреевич Щепелин on 30.01.2023.
-//
+// View+Extension.swift
+// Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
 
@@ -23,5 +19,17 @@ extension View {
     
     func neumorphismSelectedCircleStyle() -> some View {
         modifier(NeumorphismSelectedCircle())
+    }
+    
+    func neumorhismNavigationCircleButtonUnselected() -> some View {
+        modifier(NeumorhismNavigationCircleButtonUnselected())
+    }
+}
+
+/// Модификатор градиента
+extension View {
+    func animatableGradient(fromGradient: Gradient, toGradient: Gradient, progress: CGFloat) -> some View {
+        modifier(AnimatableGradientModifier(fromGradient: fromGradient,
+                                                 toGradient: toGradient, progress: progress))
     }
 }

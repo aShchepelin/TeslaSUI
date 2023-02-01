@@ -1,14 +1,13 @@
-//
-//  NeumorphismSelected.swift
-//  SUI
-//
-//  Created by Александр Андреевич Щепелин on 30.01.2023.
-//
+// NeumorphismSelected.swift
+// Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
 
 /// Нажатая кнопка
 struct NeumorphismSelected: ViewModifier {
+    
+    // MARK: - Public Methods
+
     func body(content: Content) -> some View {
         content
             .shadow(color: Color.lightShadow

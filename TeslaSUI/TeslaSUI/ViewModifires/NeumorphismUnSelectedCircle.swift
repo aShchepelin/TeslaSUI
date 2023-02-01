@@ -1,14 +1,13 @@
-//
-//  NeumorphismUnSelectedCircle.swift
-//  SUI
-//
-//  Created by Александр Андреевич Щепелин on 30.01.2023.
-//
+// NeumorphismUnSelectedCircle.swift
+// Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
 
-/// Ненажатая круглая кнопка
+/// Не нажатая круглая кнопка
 struct NeumorphismUnSelectedCircle: ViewModifier {
+    
+    // MARK: - Public Methods
+
     func body(content: Content) -> some View {
         content
             .padding(.all, 10)

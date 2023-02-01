@@ -1,9 +1,5 @@
-//
-//  Color+Extension.swift
-//  SUI
-//
-//  Created by Александр Андреевич Щепелин on 30.01.2023.
-//
+// Color+Extension.swift
+// Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
 
@@ -18,4 +14,12 @@ extension Color {
     static let bottomBackgroundGradient = Color("bottomBackgroundGradient")
     static let secondScreenTopGradient = Color("secondScreenTopGradient")
     static let secondScreenBottomGradient = Color("secondScreenBottomGradient")
+    static let climateScreenTopGradient = Color("climateScreenTopGradient")
+    static let climateScreenBottomGradient = Color("climateScreenBottomGradient")
+    static let circleThreeColor = Color("circleThreeColor")
+    static let ellipseTopGradient = Color("ellipseTopGradient")
+    static let ellipseBottomGradient = Color("ellipseBottomGradient")
+    static let internalCircleColor = Color("internalCircleColor")
+    static let progressViewBottomGradient = Color("progressViewBottomGradient")
+    static let progressViewTopGradient = Color("progressViewTopGradient")
 }

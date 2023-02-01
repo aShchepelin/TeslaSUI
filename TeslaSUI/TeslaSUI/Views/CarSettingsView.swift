@@ -1,4 +1,4 @@
-// ContentView.swift
+// CarSettingsView.swift
 // Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
@@ -14,6 +14,7 @@ struct CarSettingsView: View {
                 headerView
                 carView
                 controllPanelView
+                navigationLinkView
                 Spacer()
                     .frame(width: 40)
                 if carSettingsViewModel.tagSelected == 1 {
@@ -27,6 +28,15 @@ struct CarSettingsView: View {
     // MARK: - Private Properties
     
     @StateObject private var carSettingsViewModel = CarSettingsViewModel()
+    
+    private var navigationLinkView: some View {
+        NavigationLink(isActive: $carSettingsViewModel.isNavigationTapped) {
+            ClimateView()
+                .navigationBarBackButtonHidden()
+        } label: {
+            Text("")
+        }
+    }
     
     private var closeCarControllView: some View {
         Button {
@@ -69,6 +79,9 @@ struct CarSettingsView: View {
                     withAnimation {
                         carSettingsViewModel.tagSelected = index
                     }
+                    if index == 2 {
+                        carSettingsViewModel.isNavigationTapped.toggle()
+                    }
                 } label: {
                     Image("\(index)")
                         .resizable()
@@ -99,7 +112,7 @@ struct CarSettingsView: View {
                     .font(.system(size: 28))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                Text(Constants.Text.kilometers)
+                Text(Constants.Text.kilometersText)
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .opacity(0.4)
