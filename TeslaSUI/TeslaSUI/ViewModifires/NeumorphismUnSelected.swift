@@ -5,6 +5,9 @@ import SwiftUI
 
 /// Ненажатая кнопка
 struct NeumorphismUnSelected: ViewModifier {
+    
+    // MARK: - Public Methods
+
     func body(content: Content) -> some View {
         content
             .shadow(color: Color.lightShadow,

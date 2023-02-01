@@ -5,6 +5,9 @@ import SwiftUI
 
 /// Ненажатая кнопка навигации
 struct NeumorhismNavigationCircleButtonUnselected: ViewModifier {
+    
+    // MARK: - Public Methods
+    
     func body(content: Content) -> some View {
         content
             .frame(width: 40,

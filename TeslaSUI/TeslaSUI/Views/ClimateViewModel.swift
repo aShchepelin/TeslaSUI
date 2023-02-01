@@ -20,4 +20,17 @@ final class ClimateViewModel: ObservableObject {
     @Published var color = Color.blue
     @Published var isPowerButtonSelected = false
     @Published var isAlertShown = false
+    
+    // MARK: - Public Methods
+    
+    func calculateActualTemperature() -> Int {
+       let actualTemperature = Int(15.0 + circleProgress)
+        return actualTemperature
+    }
+    
+    func getStepperValue(_ newValue: Int) {
+        if 0...15 ~= newValue {
+            circleProgress = CGFloat(newValue)
+        }
+    }
 }

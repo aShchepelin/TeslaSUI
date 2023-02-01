@@ -16,7 +16,7 @@
 		6F8D3EDF2989964900C2E9FF /* ClimateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3EDE2989964900C2E9FF /* ClimateViewModel.swift */; };
 		6F8D3EE129899B4C00C2E9FF /* ButtonImageModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3EE029899B4C00C2E9FF /* ButtonImageModifier.swift */; };
 		6F8D3EE32989AC1400C2E9FF /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3EE22989AC1400C2E9FF /* BottomSheetView.swift */; };
-		6F8D3EE52989D81300C2E9FF /* CustomStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3EE42989D81300C2E9FF /* CustomStepper.swift */; };
+		6F8D3EE52989D81300C2E9FF /* CustomStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3EE42989D81300C2E9FF /* CustomStepperView.swift */; };
 		6FFCA03F29883AA60083C501 /* NeumorphismUnSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFCA03E29883AA60083C501 /* NeumorphismUnSelected.swift */; };
 		6FFCA04129883B820083C501 /* NeumorphismSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFCA04029883B820083C501 /* NeumorphismSelected.swift */; };
 		6FFCA04329883BEC0083C501 /* NeumorphismUnSelectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFCA04229883BEC0083C501 /* NeumorphismUnSelectedCircle.swift */; };
@@ -42,7 +42,7 @@
 		6F8D3EDE2989964900C2E9FF /* ClimateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClimateViewModel.swift; sourceTree = "<group>"; };
 		6F8D3EE029899B4C00C2E9FF /* ButtonImageModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonImageModifier.swift; sourceTree = "<group>"; };
 		6F8D3EE22989AC1400C2E9FF /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
-		6F8D3EE42989D81300C2E9FF /* CustomStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepper.swift; sourceTree = "<group>"; };
+		6F8D3EE42989D81300C2E9FF /* CustomStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepperView.swift; sourceTree = "<group>"; };
 		6FFCA03E29883AA60083C501 /* NeumorphismUnSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismUnSelected.swift; sourceTree = "<group>"; };
 		6FFCA04029883B820083C501 /* NeumorphismSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismSelected.swift; sourceTree = "<group>"; };
 		6FFCA04229883BEC0083C501 /* NeumorphismUnSelectedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismUnSelectedCircle.swift; sourceTree = "<group>"; };
@@ -137,7 +137,7 @@
 				6FFCA05729896B1C0083C501 /* AnimatableGradientModifier.swift */,
 				6FFCA04C298861FF0083C501 /* StartView.swift */,
 				6F8D3EDC2989894B00C2E9FF /* ClimateView.swift */,
-				6F8D3EE42989D81300C2E9FF /* CustomStepper.swift */,
+				6F8D3EE42989D81300C2E9FF /* CustomStepperView.swift */,
 				6F8D3EE22989AC1400C2E9FF /* BottomSheetView.swift */,
 				6F8D3EDE2989964900C2E9FF /* ClimateViewModel.swift */,
 				6FFCA05529886B4F0083C501 /* StartViewModel.swift */,
@@ -256,7 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F8D3EE52989D81300C2E9FF /* CustomStepper.swift in Sources */,
+				6F8D3EE52989D81300C2E9FF /* CustomStepperView.swift in Sources */,
 				6F8D3EE129899B4C00C2E9FF /* ButtonImageModifier.swift in Sources */,
 				6FFCA05829896B1C0083C501 /* AnimatableGradientModifier.swift in Sources */,
 				6F8D3EDF2989964900C2E9FF /* ClimateViewModel.swift in Sources */,

@@ -5,6 +5,8 @@ import SwiftUI
 
 /// Анимация градиента
 struct AnimatableGradientModifier: AnimatableModifier {
+    // MARK: - Public Propeties
+    
     let fromGradient: Gradient
     let toGradient: Gradient
     var progress: CGFloat = 0.0
@@ -13,6 +15,8 @@ struct AnimatableGradientModifier: AnimatableModifier {
         get { progress }
         set { progress = newValue }
     }
+    
+    // MARK: - Public Methods
 
     func body(content: Content) -> some View {
         var gradientColors: [Color] = []

@@ -3,15 +3,35 @@
 
 import SwiftUI
 
-/// Нижний список
+/// Универсальный боттомшит
 struct BottomSheetView<Content: View>: View {
+    
+    // MARK: - Public Propeties
+    
     let content: () -> Content
+    
+    var body: some View {
+        ZStack {
+            content()
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2)
+                .background(
+                    .ultraThinMaterial, in:
+                        RoundedRectangle(cornerRadius: 10))
+                .ignoresSafeArea(.all, edges: .bottom)
+                .offset(y: UIScreen.main.bounds.height / 2 + 100)
+                .offset(y: currentMenuOffsetY)
+                .gesture(dragGesture)
+        }
+        .ignoresSafeArea(edges: .top)
+    }
+    
+    // MARK: - Private Propeties
     
     @GestureState private var gestureOffset = CGSize.zero
     @State private var currentMenuOffsetY: CGFloat = 0.0
     @State private var lastMenuOffsetY: CGFloat = 0.0
     
-    var dragGesture: some Gesture {
+    private var dragGesture: some Gesture {
         DragGesture()
             .updating($gestureOffset) { value, state, _ in
                 state = value.translation
@@ -31,26 +51,14 @@ struct BottomSheetView<Content: View>: View {
             }
     }
     
-    func onChangeMenuOffset() {
+    // MARK: - Private Methods
+    
+   private func onChangeMenuOffset() {
         DispatchQueue.main.async {
             currentMenuOffsetY = gestureOffset.height + lastMenuOffsetY
         }
     }
     
-    var body: some View {
-        ZStack {
-            content()
-                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2)
-                .background(
-                    .ultraThinMaterial, in:
-                                RoundedRectangle(cornerRadius: 10))
-                .ignoresSafeArea(.all, edges: .bottom)
-                .offset(y: UIScreen.main.bounds.height / 2 + 100)
-                .offset(y: currentMenuOffsetY)
-                .gesture(dragGesture)
-        }
-        .ignoresSafeArea(edges: .top)
-    }
 }
 
 struct BottomSheetView_Previews: PreviewProvider {

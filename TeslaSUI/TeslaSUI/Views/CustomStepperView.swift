@@ -1,10 +1,10 @@
-// CustomStepper.swift
+// CustomStepperView.swift
 // Copyright © RoadMap. All rights reserved.
 
 import SwiftUI
 
 /// Кастомный степпер
-struct CustomStepper: View {
+struct CustomStepperView: View {
     
     // MARK: - Public properties
         
@@ -17,7 +17,7 @@ struct CustomStepper: View {
             } label: {
                 Image(systemName: Constants.Images.chevronLeftImageName)
             }
-            Text("\(15 + value)°")
+            Text("\(15 + value)\(Constants.Text.celsiusText)")
                 .font(.system(size: 34))
                 .padding(.horizontal)
             Button {

@@ -11,16 +11,10 @@ struct ClimateView: View {
         backgroundStackView {
             ZStack {
                 VStack {
-                    HStack {
-                        backButtonView
-                        Spacer()
-                        screenNameTextView
-                        Spacer()
-                        settingsButtonView
-                    }
+                   headerView
                     ZStack {
                         progressView
-                        trimCirlceProgress
+                        trimCirlceProgressView
                         if climateViewModel.isAlertShown {
                             alertView
                         } else {
@@ -31,24 +25,7 @@ struct ClimateView: View {
                     climateSettingsView
                     Spacer()
                 }
-                BottomSheetView {
-                    VStack {
-                        bottomSheetCapsuleView
-                        Spacer()
-                        HStack {
-                            bottomSheetTextView
-                            Spacer()
-                            acIsOnButtonView
-                        }
-                        HStack(spacing: -20) {
-                            colorPickerView
-                            stepperView
-                            ventButtonView
-                        }
-                        .padding(.top)
-                        Spacer(minLength: 240)
-                    }
-                }
+               bottomSheetView
             }
         }
     }
@@ -56,6 +33,38 @@ struct ClimateView: View {
     // MARK: Private Propeties
     
     @StateObject private var climateViewModel = ClimateViewModel()
+    
+    private var bottomSheetView: some View {
+        BottomSheetView {
+            VStack {
+                bottomSheetCapsuleView
+                Spacer()
+                HStack {
+                    bottomSheetTextView
+                    Spacer()
+                    acIsOnButtonView
+                }
+                .padding(.horizontal)
+                HStack(spacing: -20) {
+                    colorPickerView
+                    stepperView
+                    ventButtonView
+                }
+                .padding(.top)
+                Spacer(minLength: 240)
+            }
+        }
+    }
+    
+    private var headerView: some View {
+        HStack {
+            backButtonView
+            Spacer()
+            screenNameTextView
+            Spacer()
+            settingsButtonView
+        }
+    }
     
     private var gradient: LinearGradient {
         LinearGradient(colors: [.topGradient, .bottomGradient],
@@ -94,15 +103,13 @@ struct ClimateView: View {
     }
     
     private var stepperView: some View {
-        CustomStepper(
+        CustomStepperView(
             value: Binding(
                 get: {
                     Int(climateViewModel.circleProgress)
                 },
                 set: { newValue in
-                    if 0...15 ~= newValue {
-                        climateViewModel.circleProgress = CGFloat(newValue)
-                    }
+                    climateViewModel.getStepperValue(newValue)
                 }
             )
         )
@@ -130,11 +137,10 @@ struct ClimateView: View {
             Image(Constants.Images.powerIconImageName)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 50, height: 50)
                 .foregroundColor(.white)
-                .frame(width: 40,
-                       height: 40)
-                .padding()
+                .frame(width: 20,
+                       height: 20)
+                .padding(25)
                 .background(RoundedRectangle(cornerRadius: 50)
                 .fill(
                     LinearGradient(colors: [.topGradient, .bottomGradient],
@@ -151,8 +157,7 @@ struct ClimateView: View {
                 }
                 .neumorphismUnSelectedStyle()
         }
-        .padding(.top, -20)
-        
+        .padding([.top, .leading], -20)
     }
     
     private var bottomSheetCapsuleView: some View {
@@ -164,7 +169,7 @@ struct ClimateView: View {
     
     private var bottomSheetTextView: some View {
         VStack(alignment: .leading) {
-            Text(Constants.Text.acIsOn)
+            Text(Constants.Text.acIsOnText)
                 .font(.system(size: 20, weight: .semibold))
             Text(Constants.Text.turnOnButtonText)
                 .font(.system(size: 18))
@@ -173,13 +178,13 @@ struct ClimateView: View {
                 .foregroundColor(.gray)
                 .padding(.top, -10)
         }
-        .padding(.leading, 30)
     }
     
     private var progressViewGradient = LinearGradient(
         colors: [.progressViewBottomGradient, .progressViewTopGradient],
         startPoint: .leading,
-        endPoint: .trailing)
+        endPoint: .trailing
+    )
     
     private var climateSettingsView: some View {
         DisclosureGroup(isExpanded: $climateViewModel.settings) {
@@ -191,7 +196,7 @@ struct ClimateView: View {
             }
         } label: {
             HStack {
-                Text(Constants.Text.climateSettings)
+                Text(Constants.Text.climateSettingsText)
                     .font(.system(size: 17, weight: .semibold))
                     .foregroundColor(.white)
             }
@@ -202,7 +207,7 @@ struct ClimateView: View {
     
     private var acClimateSettingView: some View {
         HStack {
-            Text(Constants.Text.ac)
+            Text(Constants.Text.acText)
                 .font(.system(size: 17, weight: .semibold))
                 .frame(width: 50)
             Button {
@@ -228,12 +233,10 @@ struct ClimateView: View {
     
     private var fanClimateSettingView: some View {
         HStack {
-            Text(Constants.Text.fan)
+            Text(Constants.Text.fanText)
                 .font(.system(size: 17, weight: .semibold))
                 .frame(width: 50)
-            Button {
-                
-            } label: {
+            Button {} label: {
                 Image(Constants.Images.fanIconImageName)
                     .resizable()
                     .modifier(ButtonImageModifire())
@@ -249,12 +252,10 @@ struct ClimateView: View {
     
     private var autoClimateSettingView: some View {
         HStack {
-            Text(Constants.Text.auto)
+            Text(Constants.Text.autoText)
                 .font(.system(size: 17, weight: .semibold))
                 .frame(width: 50)
-            Button {
-                
-            } label: {
+            Button {} label: {
                 Image(Constants.Images.autoIconImageName)
                     .resizable()
                     .modifier(ButtonImageModifire())
@@ -269,12 +270,10 @@ struct ClimateView: View {
     
     private var heatClimateSettingView: some View {
         HStack {
-            Text(Constants.Text.heat)
+            Text(Constants.Text.heatText)
                 .font(.system(size: 17, weight: .semibold))
                 .frame(width: 50)
-            Button {
-                
-            } label: {
+            Button {} label: {
                 Image(Constants.Images.heatIconImageName)
                     .resizable()
                     .modifier(ButtonImageModifire())
@@ -288,7 +287,7 @@ struct ClimateView: View {
         }
     }
     
-    private var trimCirlceProgress: some View {
+    private var trimCirlceProgressView: some View {
         Circle()
             .trim(from: 0, to: climateViewModel.circleProgress / 15)
             .stroke(selectColorToGradient(), style: StrokeStyle(lineWidth: 25,
@@ -324,7 +323,6 @@ struct ClimateView: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 20, height: 20)
-            
         }
         .neumorhismNavigationCircleButtonUnselected()
         .overlay(
@@ -333,9 +331,7 @@ struct ClimateView: View {
             .opacity(climateViewModel.isAlertShown ? 1 : 0)
         )
     }
-    
-    private var actualTemperature: Int { Int(15.0 + climateViewModel.circleProgress) }
-    
+        
     private var progressView: some View {
         ZStack {
             Circle()
@@ -354,7 +350,7 @@ struct ClimateView: View {
                 )
                 .frame(width: 119.25)
             if climateViewModel.isPowerButtonSelected {
-                Text("\(actualTemperature)C")
+                Text("\(climateViewModel.calculateActualTemperature())\(Constants.Text.celsiusText)")
                     .font(.system(size: 28.7, weight: .semibold))
             } else {
                 EmptyView()

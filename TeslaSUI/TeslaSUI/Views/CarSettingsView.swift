@@ -112,7 +112,7 @@ struct CarSettingsView: View {
                     .font(.system(size: 28))
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                Text(Constants.Text.kilometers)
+                Text(Constants.Text.kilometersText)
                     .font(.system(size: 17))
                     .fontWeight(.semibold)
                     .opacity(0.4)

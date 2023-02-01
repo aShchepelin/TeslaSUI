@@ -69,7 +69,6 @@ struct StartView: View {
             )
         }
         .frame(width: 300)
-        
     }
     
     private var settingsButton: some View {
