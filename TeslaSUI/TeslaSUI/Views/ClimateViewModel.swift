@@ -24,8 +24,7 @@ final class ClimateViewModel: ObservableObject {
     // MARK: - Public Methods
     
     func calculateActualTemperature() -> Int {
-       let actualTemperature = Int(15.0 + circleProgress)
-        return actualTemperature
+       Int(15.0 + circleProgress)
     }
     
     func getStepperValue(_ newValue: Int) {

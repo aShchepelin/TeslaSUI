@@ -3,7 +3,7 @@
 
 import SwiftUI
 
-/// Ненажатая кнопка навигации
+/// Не нажатая кнопка навигации
 struct NeumorhismNavigationCircleButtonUnselected: ViewModifier {
     
     // MARK: - Public Methods

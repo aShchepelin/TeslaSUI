@@ -3,7 +3,7 @@
 
 import SwiftUI
 
-/// Ненажатая кнопка
+/// Не нажатая кнопка
 struct NeumorphismUnSelected: ViewModifier {
     
     // MARK: - Public Methods

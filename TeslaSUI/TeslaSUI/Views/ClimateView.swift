@@ -117,9 +117,7 @@ struct ClimateView: View {
     
     private var ventButtonView: some View {
         VStack {
-            Button {
-                
-            } label: {
+            Button {} label: {
                 Image(Constants.Images.carDoorImageName)
                     .resizable()
                     .frame(width: 21, height: 22)

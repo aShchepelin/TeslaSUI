@@ -8,18 +8,18 @@ struct BottomSheetView<Content: View>: View {
     
     // MARK: - Public Propeties
     
-    let content: () -> Content
+    let contentClosure: () -> Content
     
     var body: some View {
         ZStack {
-            content()
+            contentClosure()
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 2)
                 .background(
                     .ultraThinMaterial, in:
                         RoundedRectangle(cornerRadius: 10))
                 .ignoresSafeArea(.all, edges: .bottom)
                 .offset(y: UIScreen.main.bounds.height / 2 + 100)
-                .offset(y: currentMenuOffsetY)
+                .offset(y: bottomSheetViewModel.currentMenuOffsetY)
                 .gesture(dragGesture)
         }
         .ignoresSafeArea(edges: .top)
@@ -28,8 +28,8 @@ struct BottomSheetView<Content: View>: View {
     // MARK: - Private Propeties
     
     @GestureState private var gestureOffset = CGSize.zero
-    @State private var currentMenuOffsetY: CGFloat = 0.0
-    @State private var lastMenuOffsetY: CGFloat = 0.0
+    
+    @StateObject private var bottomSheetViewModel = BottomSheetViewModel()
     
     private var dragGesture: some Gesture {
         DragGesture()
@@ -38,16 +38,7 @@ struct BottomSheetView<Content: View>: View {
                 onChangeMenuOffset()
             }
             .onEnded { _ in
-                let maxHeight = UIScreen.main.bounds.height / 6
-                
-                withAnimation {
-                    if -currentMenuOffsetY > maxHeight / 2 {
-                        currentMenuOffsetY = -maxHeight
-                    } else {
-                        currentMenuOffsetY = 0
-                    }
-                    lastMenuOffsetY = currentMenuOffsetY
-                }
+                bottomSheetViewModel.getOffsetY()
             }
     }
     
@@ -55,7 +46,7 @@ struct BottomSheetView<Content: View>: View {
     
    private func onChangeMenuOffset() {
         DispatchQueue.main.async {
-            currentMenuOffsetY = gestureOffset.height + lastMenuOffsetY
+            bottomSheetViewModel.currentMenuOffsetY = gestureOffset.height + bottomSheetViewModel.lastMenuOffsetY
         }
     }
     

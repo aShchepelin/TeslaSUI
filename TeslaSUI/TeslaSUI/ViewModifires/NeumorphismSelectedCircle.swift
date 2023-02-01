@@ -3,7 +3,7 @@
 
 import SwiftUI
 
-/// Ненажатая круглая кнопка
+/// Не нажатая круглая кнопка
 struct NeumorphismSelectedCircle: ViewModifier {
     
     // MARK: - Public Methods
