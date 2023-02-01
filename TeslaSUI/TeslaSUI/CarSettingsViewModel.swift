@@ -14,4 +14,5 @@ final class CarSettingsViewModel: ObservableObject {
     
     @Published var isCarClose = false
     @Published var tagSelected = 0
+    @Published var isNavigationTapped = false
 }

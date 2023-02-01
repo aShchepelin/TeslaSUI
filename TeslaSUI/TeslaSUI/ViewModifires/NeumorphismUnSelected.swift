@@ -11,13 +11,11 @@ import SwiftUI
 struct NeumorphismUnSelected: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .shadow(color: Color.lightShadow
-                .opacity(0.25),
+            .shadow(color: Color.lightShadow,
                     radius: 6,
                     x: -6,
                     y: -6)
-            .shadow(color: Color.darkShadow
-                .opacity(0.25),
+            .shadow(color: Color.darkShadow,
                     radius: 6,
                     x: 6,
                     y: 6)

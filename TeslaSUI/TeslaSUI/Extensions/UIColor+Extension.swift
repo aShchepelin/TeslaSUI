@@ -9,5 +9,5 @@ import UIKit
 
 /// Добавление новых цветов
 extension UIColor {
-    static let backgrounElement = UIColor(named: "backgroundElement")
+    static let backgroundElement = UIColor(named: "backgroundElement")
 }
