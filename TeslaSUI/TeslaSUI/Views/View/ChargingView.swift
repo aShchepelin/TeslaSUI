@@ -29,7 +29,7 @@ struct ChargingView: View {
     }
 
     // MARK: - Private Properties
-    
+
     @StateObject private var chargingViewModel = ChargingViewModel()
 
     private var progressView: some View {
@@ -56,8 +56,11 @@ struct ChargingView: View {
                                 Color.progressViewTopGradient
                             )
                             .opacity(0.2)
-                            .scaleEffect(x: chargingViewModel.chargeSliderValue / 100,
-                                         y: 3, anchor: .leading)
+                            .scaleEffect(
+                                x: chargingViewModel.chargeSliderValue / 100,
+                                y: 3,
+                                anchor: .leading
+                            )
                             .blur(radius: 12)
                             .padding(.bottom, 20)
                     )
@@ -71,8 +74,10 @@ struct ChargingView: View {
                             endPoint: .bottom
                         )
                     )
-                    .scaleEffect(x: chargingViewModel.chargeSliderValue / 100,
-                                 anchor: .leading)
+                    .scaleEffect(
+                        x: chargingViewModel.chargeSliderValue / 100,
+                        anchor: .leading
+                    )
                     .clipShape(CustomChargeProgressViewShape())
                     .padding(.bottom, 190)
 
@@ -167,7 +172,7 @@ struct ChargingView: View {
             CustomSliderView(sliderValue: $chargingViewModel.chargeSliderValue)
                 .frame(height: 9)
                 .frame(width: 275)
-            
+
             Text(Constants.Text.chargeLimitText)
                 .foregroundColor(.gray)
         }
