@@ -18,6 +18,22 @@
 		6F8D3EE32989AC1400C2E9FF /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3EE22989AC1400C2E9FF /* BottomSheetView.swift */; };
 		6F8D3EE52989D81300C2E9FF /* CustomStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3EE42989D81300C2E9FF /* CustomStepperView.swift */; };
 		6F8D3EE7298AD10300C2E9FF /* BottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3EE6298AD10300C2E9FF /* BottomSheetViewModel.swift */; };
+		6F8D3F03298AEF9100C2E9FF /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F02298AEF9100C2E9FF /* LaunchScreenView.swift */; };
+		6F8D3F07298B12E900C2E9FF /* TabItemPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F06298B12E900C2E9FF /* TabItemPreferenceKey.swift */; };
+		6F8D3F09298B132300C2E9FF /* TabItemModifire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F08298B132300C2E9FF /* TabItemModifire.swift */; };
+		6F8D3F0B298B136F00C2E9FF /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F0A298B136F00C2E9FF /* TabItem.swift */; };
+		6F8D3F0D298B13B200C2E9FF /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F0C298B13B200C2E9FF /* CustomTabView.swift */; };
+		6F8D3F0F298B145100C2E9FF /* CustomTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F0E298B145100C2E9FF /* CustomTabViewModel.swift */; };
+		6F8D3F14298B159800C2E9FF /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F13298B159800C2E9FF /* MainTabView.swift */; };
+		6F8D3F16298B161E00C2E9FF /* MainTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F15298B161E00C2E9FF /* MainTabViewModel.swift */; };
+		6F8D3F18298C1DB400C2E9FF /* CustomTabViewBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F17298C1DB400C2E9FF /* CustomTabViewBackground.swift */; };
+		6F8D3F1A298C26D000C2E9FF /* ChargingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F19298C26D000C2E9FF /* ChargingView.swift */; };
+		6F8D3F1E298C36F200C2E9FF /* CustomChargeProgressViewShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F1D298C36F200C2E9FF /* CustomChargeProgressViewShape.swift */; };
+		6F8D3F20298C428D00C2E9FF /* ProgressViewThumbViewShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F1F298C428D00C2E9FF /* ProgressViewThumbViewShape.swift */; };
+		6F8D3F24298C5CF900C2E9FF /* LaunchScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F23298C5CF900C2E9FF /* LaunchScreenViewModel.swift */; };
+		6F8D3F26298C6D3C00C2E9FF /* CustomSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F25298C6D3C00C2E9FF /* CustomSliderView.swift */; };
+		6F8D3F28298C768100C2E9FF /* ChargingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F27298C768100C2E9FF /* ChargingViewModel.swift */; };
+		6F8D3F2A298C7D1E00C2E9FF /* CustomSliderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8D3F29298C7D1E00C2E9FF /* CustomSliderViewModel.swift */; };
 		6FFCA03F29883AA60083C501 /* NeumorphismUnSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFCA03E29883AA60083C501 /* NeumorphismUnSelected.swift */; };
 		6FFCA04129883B820083C501 /* NeumorphismSelected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFCA04029883B820083C501 /* NeumorphismSelected.swift */; };
 		6FFCA04329883BEC0083C501 /* NeumorphismUnSelectedCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFCA04229883BEC0083C501 /* NeumorphismUnSelectedCircle.swift */; };
@@ -45,6 +61,22 @@
 		6F8D3EE22989AC1400C2E9FF /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		6F8D3EE42989D81300C2E9FF /* CustomStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepperView.swift; sourceTree = "<group>"; };
 		6F8D3EE6298AD10300C2E9FF /* BottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewModel.swift; sourceTree = "<group>"; };
+		6F8D3F02298AEF9100C2E9FF /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		6F8D3F06298B12E900C2E9FF /* TabItemPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemPreferenceKey.swift; sourceTree = "<group>"; };
+		6F8D3F08298B132300C2E9FF /* TabItemModifire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItemModifire.swift; sourceTree = "<group>"; };
+		6F8D3F0A298B136F00C2E9FF /* TabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		6F8D3F0C298B13B200C2E9FF /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		6F8D3F0E298B145100C2E9FF /* CustomTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewModel.swift; sourceTree = "<group>"; };
+		6F8D3F13298B159800C2E9FF /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		6F8D3F15298B161E00C2E9FF /* MainTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewModel.swift; sourceTree = "<group>"; };
+		6F8D3F17298C1DB400C2E9FF /* CustomTabViewBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewBackground.swift; sourceTree = "<group>"; };
+		6F8D3F19298C26D000C2E9FF /* ChargingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingView.swift; sourceTree = "<group>"; };
+		6F8D3F1D298C36F200C2E9FF /* CustomChargeProgressViewShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChargeProgressViewShape.swift; sourceTree = "<group>"; };
+		6F8D3F1F298C428D00C2E9FF /* ProgressViewThumbViewShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewThumbViewShape.swift; sourceTree = "<group>"; };
+		6F8D3F23298C5CF900C2E9FF /* LaunchScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewModel.swift; sourceTree = "<group>"; };
+		6F8D3F25298C6D3C00C2E9FF /* CustomSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderView.swift; sourceTree = "<group>"; };
+		6F8D3F27298C768100C2E9FF /* ChargingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingViewModel.swift; sourceTree = "<group>"; };
+		6F8D3F29298C7D1E00C2E9FF /* CustomSliderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSliderViewModel.swift; sourceTree = "<group>"; };
 		6FFCA03E29883AA60083C501 /* NeumorphismUnSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismUnSelected.swift; sourceTree = "<group>"; };
 		6FFCA04029883B820083C501 /* NeumorphismSelected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismSelected.swift; sourceTree = "<group>"; };
 		6FFCA04229883BEC0083C501 /* NeumorphismUnSelectedCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphismUnSelectedCircle.swift; sourceTree = "<group>"; };
@@ -91,7 +123,6 @@
 			children = (
 				6F6556D72975B74300808DB4 /* SUIApp.swift */,
 				6FFCA052298863910083C501 /* Views */,
-				6FFCA04629883F460083C501 /* CarSettingsViewModel.swift */,
 				6FFCA0512988637F0083C501 /* ViewModifires */,
 				6FFCA0502988636B0083C501 /* Extensions */,
 				6FFCA04E2988623F0083C501 /* Constants.swift */,
@@ -109,6 +140,52 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		6F8D3F10298B14F900C2E9FF /* CustomTabView */ = {
+			isa = PBXGroup;
+			children = (
+				6F8D3F06298B12E900C2E9FF /* TabItemPreferenceKey.swift */,
+				6F8D3F08298B132300C2E9FF /* TabItemModifire.swift */,
+				6F8D3F0A298B136F00C2E9FF /* TabItem.swift */,
+				6F8D3F0C298B13B200C2E9FF /* CustomTabView.swift */,
+				6F8D3F0E298B145100C2E9FF /* CustomTabViewModel.swift */,
+				6F8D3F17298C1DB400C2E9FF /* CustomTabViewBackground.swift */,
+			);
+			path = CustomTabView;
+			sourceTree = "<group>";
+		};
+		6F8D3F11298B154B00C2E9FF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6F8D3F27298C768100C2E9FF /* ChargingViewModel.swift */,
+				6F8D3F23298C5CF900C2E9FF /* LaunchScreenViewModel.swift */,
+				6F8D3F29298C7D1E00C2E9FF /* CustomSliderViewModel.swift */,
+				6F8D3F15298B161E00C2E9FF /* MainTabViewModel.swift */,
+				6F8D3EE6298AD10300C2E9FF /* BottomSheetViewModel.swift */,
+				6F8D3EDE2989964900C2E9FF /* ClimateViewModel.swift */,
+				6FFCA04629883F460083C501 /* CarSettingsViewModel.swift */,
+				6FFCA05529886B4F0083C501 /* StartViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		6F8D3F12298B155D00C2E9FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6F6556D92975B74300808DB4 /* CarSettingsView.swift */,
+				6FFCA04C298861FF0083C501 /* StartView.swift */,
+				6F8D3EDC2989894B00C2E9FF /* ClimateView.swift */,
+				6F8D3F02298AEF9100C2E9FF /* LaunchScreenView.swift */,
+				6F8D3EE22989AC1400C2E9FF /* BottomSheetView.swift */,
+				6F8D3EE42989D81300C2E9FF /* CustomStepperView.swift */,
+				6F8D3F19298C26D000C2E9FF /* ChargingView.swift */,
+				6F8D3F25298C6D3C00C2E9FF /* CustomSliderView.swift */,
+				6F8D3F1F298C428D00C2E9FF /* ProgressViewThumbViewShape.swift */,
+				6F8D3F1D298C36F200C2E9FF /* CustomChargeProgressViewShape.swift */,
+				6F8D3F13298B159800C2E9FF /* MainTabView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		6FFCA0502988636B0083C501 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +199,7 @@
 		6FFCA0512988637F0083C501 /* ViewModifires */ = {
 			isa = PBXGroup;
 			children = (
+				6FFCA05729896B1C0083C501 /* AnimatableGradientModifier.swift */,
 				6FFCA03E29883AA60083C501 /* NeumorphismUnSelected.swift */,
 				6FFCA04029883B820083C501 /* NeumorphismSelected.swift */,
 				6FFCA04229883BEC0083C501 /* NeumorphismUnSelectedCircle.swift */,
@@ -135,15 +213,9 @@
 		6FFCA052298863910083C501 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				6F6556D92975B74300808DB4 /* CarSettingsView.swift */,
-				6FFCA05729896B1C0083C501 /* AnimatableGradientModifier.swift */,
-				6FFCA04C298861FF0083C501 /* StartView.swift */,
-				6F8D3EDC2989894B00C2E9FF /* ClimateView.swift */,
-				6F8D3EE42989D81300C2E9FF /* CustomStepperView.swift */,
-				6F8D3EE22989AC1400C2E9FF /* BottomSheetView.swift */,
-				6F8D3EE6298AD10300C2E9FF /* BottomSheetViewModel.swift */,
-				6F8D3EDE2989964900C2E9FF /* ClimateViewModel.swift */,
-				6FFCA05529886B4F0083C501 /* StartViewModel.swift */,
+				6F8D3F12298B155D00C2E9FF /* View */,
+				6F8D3F10298B14F900C2E9FF /* CustomTabView */,
+				6F8D3F11298B154B00C2E9FF /* ViewModels */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,7 +308,7 @@
 		};
 		6FFCA03D298836900083C501 /* SwiftLinter */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -248,7 +320,7 @@
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
@@ -260,12 +332,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F8D3EE52989D81300C2E9FF /* CustomStepperView.swift in Sources */,
+				6F8D3F26298C6D3C00C2E9FF /* CustomSliderView.swift in Sources */,
+				6F8D3F16298B161E00C2E9FF /* MainTabViewModel.swift in Sources */,
 				6F8D3EE129899B4C00C2E9FF /* ButtonImageModifier.swift in Sources */,
 				6FFCA05829896B1C0083C501 /* AnimatableGradientModifier.swift in Sources */,
+				6F8D3F0B298B136F00C2E9FF /* TabItem.swift in Sources */,
 				6F8D3EDF2989964900C2E9FF /* ClimateViewModel.swift in Sources */,
+				6F8D3F0D298B13B200C2E9FF /* CustomTabView.swift in Sources */,
+				6F8D3F0F298B145100C2E9FF /* CustomTabViewModel.swift in Sources */,
 				6FFCA05629886B4F0083C501 /* StartViewModel.swift in Sources */,
+				6F8D3F09298B132300C2E9FF /* TabItemModifire.swift in Sources */,
 				6FFCA04129883B820083C501 /* NeumorphismSelected.swift in Sources */,
+				6F8D3F20298C428D00C2E9FF /* ProgressViewThumbViewShape.swift in Sources */,
+				6F8D3F1A298C26D000C2E9FF /* ChargingView.swift in Sources */,
 				6FFCA04F2988623F0083C501 /* Constants.swift in Sources */,
+				6F8D3F14298B159800C2E9FF /* MainTabView.swift in Sources */,
+				6F8D3F18298C1DB400C2E9FF /* CustomTabViewBackground.swift in Sources */,
+				6F8D3F28298C768100C2E9FF /* ChargingViewModel.swift in Sources */,
+				6F8D3F2A298C7D1E00C2E9FF /* CustomSliderViewModel.swift in Sources */,
 				6FFCA04D298861FF0083C501 /* StartView.swift in Sources */,
 				6FFCA04B2988593E0083C501 /* Color+Extension.swift in Sources */,
 				6F8D3EDD2989894B00C2E9FF /* ClimateView.swift in Sources */,
@@ -275,11 +359,15 @@
 				6FFCA04329883BEC0083C501 /* NeumorphismUnSelectedCircle.swift in Sources */,
 				6FFCA04729883F460083C501 /* CarSettingsViewModel.swift in Sources */,
 				6F6556D82975B74300808DB4 /* SUIApp.swift in Sources */,
+				6F8D3F24298C5CF900C2E9FF /* LaunchScreenViewModel.swift in Sources */,
 				6FFCA054298867310083C501 /* NeumorphismSelectedCircle.swift in Sources */,
 				6FFCA04529883C850083C501 /* View+Extension.swift in Sources */,
 				6FFCA03F29883AA60083C501 /* NeumorphismUnSelected.swift in Sources */,
+				6F8D3F07298B12E900C2E9FF /* TabItemPreferenceKey.swift in Sources */,
+				6F8D3F03298AEF9100C2E9FF /* LaunchScreenView.swift in Sources */,
 				6F8D3EE7298AD10300C2E9FF /* BottomSheetViewModel.swift in Sources */,
 				6FFCA0492988551F0083C501 /* UIColor+Extension.swift in Sources */,
+				6F8D3F1E298C36F200C2E9FF /* CustomChargeProgressViewShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

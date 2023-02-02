@@ -6,7 +6,7 @@ import SwiftUI
 /// Анимация градиента
 struct AnimatableGradientModifier: AnimatableModifier {
     // MARK: - Public Propeties
-    
+
     let fromGradient: Gradient
     let toGradient: Gradient
     var progress: CGFloat = 0.0
@@ -15,20 +15,23 @@ struct AnimatableGradientModifier: AnimatableModifier {
         get { progress }
         set { progress = newValue }
     }
-    
+
     // MARK: - Public Methods
 
     func body(content: Content) -> some View {
         var gradientColors: [Color] = []
 
-        for index in 0..<fromGradient.stops.count {
+        for index in 0 ..< fromGradient.stops.count {
             let fromColor = UIColor(fromGradient.stops[index].color)
             let toColor = UIColor(toGradient.stops[index].color)
             gradientColors.append(colorMixer(fromColor: fromColor, toColor: toColor, progress: progress))
         }
 
-        return LinearGradient(gradient: Gradient(colors: gradientColors),
-                              startPoint: .topLeading, endPoint: .bottomTrailing)
+        return LinearGradient(
+            gradient: Gradient(colors: gradientColors),
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
     }
 
     func colorMixer(fromColor: UIColor, toColor: UIColor, progress: CGFloat) -> Color {

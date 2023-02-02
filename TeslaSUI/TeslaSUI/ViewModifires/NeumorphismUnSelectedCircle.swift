@@ -5,7 +5,6 @@ import SwiftUI
 
 /// Не нажатая круглая кнопка
 struct NeumorphismUnSelectedCircle: ViewModifier {
-    
     // MARK: - Public Methods
 
     func body(content: Content) -> some View {
@@ -13,9 +12,8 @@ struct NeumorphismUnSelectedCircle: ViewModifier {
             .padding(.all, 10)
             .background(
                 Circle()
-                    .fill(Color.backgrounElement)
+                    .fill(Color.backgroundElement)
             )
             .neumorphismUnSelectedStyle()
-            
     }
 }

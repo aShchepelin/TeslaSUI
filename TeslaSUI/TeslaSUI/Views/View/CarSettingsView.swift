@@ -5,9 +5,8 @@ import SwiftUI
 
 /// Экран
 struct CarSettingsView: View {
-
     // MARK: - Public Properties
-    
+
     var body: some View {
         backgroundStackView {
             VStack {
@@ -19,16 +18,17 @@ struct CarSettingsView: View {
                     .frame(width: 40)
                 if carSettingsViewModel.tagSelected == 1 {
                     closeCarControllView
+                        .padding(.bottom, 100)
                 }
                 Spacer()
             }
         }
     }
-    
+
     // MARK: - Private Properties
-    
+
     @StateObject private var carSettingsViewModel = CarSettingsViewModel()
-    
+
     private var navigationLinkView: some View {
         NavigationLink(isActive: $carSettingsViewModel.isNavigationTapped) {
             ClimateView()
@@ -37,7 +37,7 @@ struct CarSettingsView: View {
             Text("")
         }
     }
-    
+
     private var closeCarControllView: some View {
         Button {
             withAnimation {
@@ -49,32 +49,35 @@ struct CarSettingsView: View {
                     Text(carSettingsViewModel.isCarClose ? Constants.Text.closedText : Constants.Text.openText)
                         .foregroundColor(.white)
                 } icon: {
-                    Image(systemName: carSettingsViewModel.isCarClose ? Constants.Images.lockOpenImageName
-                          : Constants.Images.lockClosedImageName)
-                        .renderingMode(.template)
-                        .neumorphismUnSelectedCircleStyle()
+                    Image(
+                        systemName: carSettingsViewModel.isCarClose ? Constants.Images.lockOpenImageName
+                            : Constants.Images.lockClosedImageName
+                    )
+                    .renderingMode(.template)
+                    .neumorphismUnSelectedCircleStyle()
                 }
             }
             .padding()
             .background(
-            RoundedRectangle(cornerRadius: 50)
-                .fill(Color.backgrounElement)
-                .neumorphismSelectedStyle()
+                RoundedRectangle(cornerRadius: 50)
+                    .fill(Color.backgroundElement)
+                    .neumorphismSelectedStyle()
             )
         }
         .frame(width: 300)
+    }
 
-    }
-    
     private var gradient: LinearGradient {
-        LinearGradient(colors: [.topGradient, .bottomGradient],
-                       startPoint: .bottom,
-                       endPoint: .top)
+        LinearGradient(
+            colors: [.topGradient, .bottomGradient],
+            startPoint: .bottom,
+            endPoint: .top
+        )
     }
-    
+
     private var controllPanelView: some View {
         HStack(spacing: 30) {
-            ForEach(1..<5) { index in
+            ForEach(1 ..< 5) { index in
                 Button {
                     withAnimation {
                         carSettingsViewModel.tagSelected = index
@@ -85,26 +88,27 @@ struct CarSettingsView: View {
                 } label: {
                     Image("\(index)")
                         .resizable()
-                        .frame(width: 44,
-                        height: 44)
+                        .frame(
+                            width: 44,
+                            height: 44
+                        )
                         .neumorphismUnSelectedCircleStyle()
                         .overlay(
-                        Circle()
-                            .stroke(gradient, lineWidth: 2)
-                            .opacity(carSettingsViewModel.tagSelected == index ? 1 : 0)
+                            Circle()
+                                .stroke(gradient, lineWidth: 2)
+                                .opacity(carSettingsViewModel.tagSelected == index ? 1 : 0)
                         )
                 }
-
             }
         }
         .padding()
         .background(
-        RoundedRectangle(cornerRadius: 50)
-            .fill(Color.backgrounElement)
-            .neumorphismUnSelectedStyle()
+            RoundedRectangle(cornerRadius: 50)
+                .fill(Color.backgroundElement)
+                .neumorphismUnSelectedStyle()
         )
     }
-    
+
     private var headerView: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -121,30 +125,35 @@ struct CarSettingsView: View {
         }
         .padding(.all, 25)
     }
-    
+
     private var carView: some View {
-        Image(carSettingsViewModel.isCarClose ? Constants.Images.teslaOpenImageName :
-                Constants.Images.teslaMainImageName)
-            .resizable()
-            .scaledToFill()
-            .frame(height: 150)
-            .padding(.horizontal)
-            .padding(.bottom, 40)
-            .shadow(color: .white.opacity(0.6),
-                    radius: 15,
-                    x: 10,
-                    y: 10)
-        
+        Image(
+            carSettingsViewModel.isCarClose ? Constants.Images.teslaOpenImageName :
+                Constants.Images.teslaMainImageName
+        )
+        .resizable()
+        .scaledToFill()
+        .frame(height: 150)
+        .padding(.horizontal)
+        .padding(.bottom, 40)
+        .shadow(
+            color: .white.opacity(0.6),
+            radius: 15,
+            x: 10,
+            y: 10
+        )
     }
-    
+
     // MARK: - Private Methods
-    
+
     private func backgroundStackView<Content: View>(content: () -> Content) -> some View {
         ZStack {
             Rectangle()
-                .fill(Color.backgrounElement)
-                .frame(maxWidth: .infinity,
-                       maxHeight: .infinity)
+                .fill(Color.backgroundElement)
+                .frame(
+                    maxWidth: .infinity,
+                    maxHeight: .infinity
+                )
                 .edgesIgnoringSafeArea(.all)
             content()
         }
