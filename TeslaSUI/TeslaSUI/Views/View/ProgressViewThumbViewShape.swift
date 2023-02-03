@@ -5,6 +5,8 @@ import SwiftUI
 
 /// Кастомный тамб
 struct ProgressViewThumbViewShape: Shape {
+    // MARK: - Public Methods
+
     func path(in rect: CGRect) -> Path {
         Path { path in
             path.move(to: CGPoint(x: rect.midX * 0.5, y: rect.midY))

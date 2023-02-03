@@ -3,7 +3,7 @@
 
 import SwiftUI
 
-/// Помогите придумать название
+/// Передача данных в иерархию представлений
 struct TabItemPreferenceKey: PreferenceKey {
     // MARK: - Public Properties
 

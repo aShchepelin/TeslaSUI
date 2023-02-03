@@ -5,7 +5,7 @@ import Foundation
 
 /// Вью модель экрана зарядки
 final class ChargingViewModel: ObservableObject {
-    // MARK: - Publoc Properties
+    // MARK: - Public Properties
 
     @Published var chargeSliderValue = 0.0
 }

@@ -15,15 +15,10 @@ struct ChargingView: View {
                 Spacer(minLength: 120)
                 VStack(spacing: 10) {
                     progressView
-                        .frame(width: 274, height: 39)
                     progressViewPercentageTextView
-                        .padding(.leading, 80)
-                        .offset(y: -50)
                     chargeLimitView
-                        .offset(y: -50)
                 }
-                superchargerDisclosureGroupView
-                    .offset(y: -50)
+                superChargerDisclosureGroupView
             }
         }
     }
@@ -92,9 +87,10 @@ struct ChargingView: View {
                     .padding(.trailing, 119)
             }
         }
+        .frame(width: 274, height: 39)
     }
 
-    private var superchargerDisclosureGroupView: some View {
+    private var superChargerDisclosureGroupView: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25)
                 .fill(Color.backgroundElement)
@@ -145,6 +141,7 @@ struct ChargingView: View {
                 .neumorhismNavigationCircleButtonUnselected()
             }
         }
+        .offset(y: -50)
     }
 
     private var progressViewPercentageTextView: some View {
@@ -165,6 +162,8 @@ struct ChargingView: View {
                 Text(Constants.Text.oneHundredPersentText)
             }
         }
+        .padding(.leading, 80)
+        .offset(y: -50)
     }
 
     private var chargeLimitView: some View {
@@ -172,57 +171,59 @@ struct ChargingView: View {
             CustomSliderView(sliderValue: $chargingViewModel.chargeSliderValue)
                 .frame(height: 9)
                 .frame(width: 275)
-
             Text(Constants.Text.chargeLimitText)
                 .foregroundColor(.gray)
         }
+        .offset(y: -50)
     }
-}
 
-private var carImageView: some View {
-    Image(Constants.Images.teslaOnSideImageName)
-        .resizable()
-        .scaledToFill()
-        .frame(height: 150)
-        .padding(.horizontal)
-        .padding(.bottom, 40)
-}
-
-private var headerView: some View {
-    HStack {
-        backButtonView
-        Spacer()
-        screenNameTextView
-        Spacer()
-        settingsButtonView
-    }
-}
-
-private var screenNameTextView: some View {
-    Text(Constants.Text.chargingScreenNameText)
-        .font(.system(size: 20, weight: .semibold))
-}
-
-private var backButtonView: some View {
-    Button {} label: {
-        Image(Constants.Images.backChevronImageName)
+    private var carImageView: some View {
+        Image(Constants.Images.teslaOnSideImageName)
             .resizable()
-            .scaledToFit()
-            .foregroundColor(.gray)
-            .frame(width: 20, height: 20)
+            .scaledToFill()
+            .frame(height: 150)
+            .padding(.horizontal)
+            .padding(.bottom, 40)
     }
-    .neumorhismNavigationCircleButtonUnselected()
+
+    private var headerView: some View {
+        HStack {
+            backButtonView
+            Spacer()
+            screenNameTextView
+            Spacer()
+            settingsButtonView
+        }
+    }
+
+    private var screenNameTextView: some View {
+        Text(Constants.Text.chargingScreenNameText)
+            .font(.system(size: 20, weight: .semibold))
+    }
+
+    private var backButtonView: some View {
+        Button {} label: {
+            Image(Constants.Images.backChevronImageName)
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(.gray)
+                .frame(width: 20, height: 20)
+        }
+        .neumorhismNavigationCircleButtonUnselected()
+    }
+
+    private var settingsButtonView: some View {
+        Button {} label: {
+            Image(Constants.Images.gearshapeImageName)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 20, height: 20)
+        }
+        .neumorhismNavigationCircleButtonUnselected()
+    }
 }
 
-private var settingsButtonView: some View {
-    Button {} label: {
-        Image(Constants.Images.gearshapeImageName)
-            .resizable()
-            .scaledToFit()
-            .frame(width: 20, height: 20)
-    }
-    .neumorhismNavigationCircleButtonUnselected()
-}
+// MARK: - Private Methods
 
 private func backgroundStackView<Content: View>(content: () -> Content) -> some View {
     ZStack {

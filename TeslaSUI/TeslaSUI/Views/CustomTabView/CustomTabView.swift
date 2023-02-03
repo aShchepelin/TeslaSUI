@@ -25,13 +25,6 @@ struct CustomTabView<Content: View>: View {
         }
     }
 
-    // MARK: - Init
-
-    public init(selection: Binding<Int>, @ViewBuilder content: () -> Content) {
-        self.content = content()
-        _selection = selection
-    }
-
     // MARK: - Private Properties
 
     @StateObject private var customTabViewModel = CustomTabViewModel()
@@ -71,6 +64,13 @@ struct CustomTabView<Content: View>: View {
             }
             Spacer()
         }
+    }
+
+    // MARK: - Init
+
+    public init(selection: Binding<Int>, @ViewBuilder content: () -> Content) {
+        self.content = content()
+        _selection = selection
     }
 }
 

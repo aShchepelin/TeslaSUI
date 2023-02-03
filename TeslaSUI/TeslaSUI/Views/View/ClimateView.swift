@@ -325,7 +325,7 @@ struct ClimateView: View {
 
     private var backButtonView: some View {
         Button {
-            self.presentation.wrappedValue.dismiss()
+            presentation.wrappedValue.dismiss()
         } label: {
             Image(Constants.Images.backChevronImageName)
                 .resizable()
