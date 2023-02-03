@@ -9,6 +9,7 @@ enum Constants {
         static let lockOpenImageName = "lock.open.fill"
         static let teslaOpenImageName = "teslaOpen"
         static let teslaMainImageName = "teslaMain"
+        static let teslaOnSideImageName = "teslaOnSide"
         static let gearshapeImageName = "gearshapeIcon"
         static let teslaLockedImageName = "teslaLocked"
         static let teslaUnlockedImageName = "teslaUnlocked"
@@ -22,15 +23,20 @@ enum Constants {
         static let chevronRightImageName = "chevron.right"
         static let carDoorImageName = "carDoor"
         static let linkImageName = "link"
+        static let chevronDownImageName = "chevron.down"
+        static let carImageName = "car"
+        static let boltImageName = "bolt"
+        static let mappinImageName = "mappin.and.ellipse"
+        static let personImageName = "person.fill"
     }
-    
+
     /// Текст лейблов
     enum Text {
         static let openText = "Unlock"
         static let closedText = "Lock"
         static let teslaText = "Tesla"
         static let kilometersText = "187 km"
-        static let climateScreenName = "CLIMATE"
+        static let climateScreenNameText = "CLIMATE"
         static let acText = "Ac"
         static let fanText = "Fan"
         static let heatText = "Heat"
@@ -43,12 +49,21 @@ enum Constants {
         static let hiText = "Hi"
         static let welcomeText = "Welcome back"
         static let teslaSupportLink = "https://www.tesla.com/support"
-        static let closeButtonLabel = "Close"
+        static let closeButtonLabelText = "Close"
         static let celsiusText = "° C"
+        static let chargingScreenNameText = "CHARGING"
+        static let chargingPercentText = "65"
+        static let percentText = "%"
+        static let seventhyFivePercentText = "75%"
+        static let oneHundredPersentText = "100%"
+        static let chargeLimitText = "Set Charge Limit"
+        static let nearbySuperchargersText = "Nearby Superchargers"
+        static let tabBarItemIdentifierText = "tabBarItem"
     }
-    
+
     /// Цифровые значения
     enum Integer {
-        static let sliderRange: ClosedRange<Double> = 0...15
+        static let sliderRange: ClosedRange<Double> = 0 ... 15
+        static let chargeSliderRange: ClosedRange<Double> = 1 ... 100
     }
 }

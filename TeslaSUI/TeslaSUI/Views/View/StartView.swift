@@ -6,7 +6,7 @@ import SwiftUI
 /// Стартовый экран приложения
 struct StartView: View {
     // MARK: - Public Properties
-    
+
     var body: some View {
         NavigationView {
             backgroundStackView {
@@ -17,19 +17,21 @@ struct StartView: View {
                     welcomeTextView
                     Spacer()
                     teslaImageView
-                        .animation(startViewModel.isOpenButtonTapped ? .easeInOut(duration: 5) : .easeIn,
-                                   value: startViewModel.isOpenButtonTapped)
+                        .animation(
+                            startViewModel.isOpenButtonTapped ? .easeInOut(duration: 2.5) : .easeIn(duration: 2.5),
+                            value: startViewModel.isOpenButtonTapped
+                        )
                     Spacer()
                     closeCarControllView
                 }
             }
         }
     }
-    
+
     // MARK: - Private Proprties
-    
+
     @StateObject private var startViewModel = StartViewModel()
-    
+
     private var welcomeTextView: some View {
         VStack {
             if startViewModel.isOpenButtonTapped {
@@ -38,12 +40,13 @@ struct StartView: View {
                     .font(.largeTitle)
                     .bold()
                     .opacity(startViewModel.isOpenButtonTapped ? 1 : 0)
+                    .transition(.opacity)
             } else {
                 EmptyView()
             }
         }
     }
-    
+
     private var closeCarControllView: some View {
         Button {
             withAnimation {
@@ -52,11 +55,13 @@ struct StartView: View {
         } label: {
             HStack {
                 Label {
-                    Text( startViewModel.isOpenButtonTapped ? Constants.Text.closedText : Constants.Text.openText)
+                    Text(startViewModel.isOpenButtonTapped ? Constants.Text.closedText : Constants.Text.openText)
                         .foregroundColor(.white)
                 } icon: {
-                    Image(systemName: startViewModel.isOpenButtonTapped ? Constants.Images.lockOpenImageName
-                          : Constants.Images.lockClosedImageName)
+                    Image(
+                        systemName: startViewModel.isOpenButtonTapped ? Constants.Images.lockOpenImageName
+                            : Constants.Images.lockClosedImageName
+                    )
                     .renderingMode(.template)
                     .neumorphismUnSelectedCircleStyle()
                 }
@@ -64,56 +69,70 @@ struct StartView: View {
             .padding()
             .background(
                 RoundedRectangle(cornerRadius: 50)
-                    .fill(Color.backgrounElement)
+                    .fill(Color.backgroundElement)
                     .neumorphismSelectedStyle()
             )
         }
         .frame(width: 300)
     }
-    
+
     private var settingsButton: some View {
         NavigationLink(isActive: $startViewModel.isCarSettingsViewShown) {
-                    CarSettingsView()
-                        .navigationBarBackButtonHidden(true)
+            MainTabView()
         } label: {
             Image(Constants.Images.gearshapeImageName)
                 .neumorhismNavigationCircleButtonUnselected()
         }
     }
-    
+
     private var teslaImageView: some View {
-        Image(startViewModel.isOpenButtonTapped ? Constants.Images.teslaUnlockedImageName :
-                Constants.Images.teslaLockedImageName)
+        Image(
+            startViewModel.isOpenButtonTapped ? Constants.Images.teslaUnlockedImageName :
+                Constants.Images.teslaLockedImageName
+        )
         .resizable()
         .scaledToFit()
-        .frame(width: startViewModel.isOpenButtonTapped ? 407 : 382.5,
-               height: startViewModel.isOpenButtonTapped ? 330 : 255)
+        .frame(
+            width: startViewModel.isOpenButtonTapped ? 407 : 382.5,
+            height: startViewModel.isOpenButtonTapped ? 330 : 255
+        )
         .padding(.bottom, startViewModel.isOpenButtonTapped ? 0 : 55)
     }
-   
+
     // MARK: - Private Methods
-    
+
     private func backgroundStackView<Content: View>(content: () -> Content) -> some View {
         ZStack {
             if startViewModel.isOpenButtonTapped {
                 Rectangle()
-                    .fill(LinearGradient(colors: [Color.secondScreenTopGradient, Color.secondScreenBottomGradient],
-                                         startPoint: .top,
-                                         endPoint: .bottom))
-                    .frame(maxWidth: .infinity,
-                           maxHeight: .infinity)
+                    .fill(LinearGradient(
+                        colors: [Color.secondScreenTopGradient, Color.secondScreenBottomGradient],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    ))
+                    .frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity
+                    )
                     .edgesIgnoringSafeArea(.all)
                     .animation(.easeInOut, value: startViewModel.isOpenButtonTapped)
                 content()
             } else {
                 Rectangle()
-                    .fill(LinearGradient(colors: [Color.topBackgroundGradient, Color.black,
-                                                  Color.black,
-                                                  Color.bottomBackgroundGradient],
-                                         startPoint: .top,
-                                         endPoint: .bottom))
-                    .frame(maxWidth: .infinity,
-                           maxHeight: .infinity)
+                    .fill(LinearGradient(
+                        colors: [
+                            Color.topBackgroundGradient,
+                            Color.black,
+                            Color.black,
+                            Color.bottomBackgroundGradient
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    ))
+                    .frame(
+                        maxWidth: .infinity,
+                        maxHeight: .infinity
+                    )
                     .edgesIgnoringSafeArea(.all)
                     .animation(.easeIn, value: startViewModel.isOpenButtonTapped)
                 content()

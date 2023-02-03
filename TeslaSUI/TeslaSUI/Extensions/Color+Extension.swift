@@ -9,7 +9,7 @@ extension Color {
     static let lightShadow = Color("lightShadow")
     static let topGradient = Color("topGradient")
     static let bottomGradient = Color("bottomGradient")
-    static let backgrounElement = Color("backgroundElement")
+    static let backgroundElement = Color("backgroundElement")
     static let topBackgroundGradient = Color("topBackgroundGradient")
     static let bottomBackgroundGradient = Color("bottomBackgroundGradient")
     static let secondScreenTopGradient = Color("secondScreenTopGradient")
@@ -22,4 +22,9 @@ extension Color {
     static let internalCircleColor = Color("internalCircleColor")
     static let progressViewBottomGradient = Color("progressViewBottomGradient")
     static let progressViewTopGradient = Color("progressViewTopGradient")
+    static let silverTopGradient = Color("silverTopGradient")
+    static let silverBottomGradient = Color("silverBottomGradient")
+    static let label = Color("label")
+    static let chargeLimit = Color("chargeLimit")
+    static let tabBarItem = Color("tabBarItemColor")
 }

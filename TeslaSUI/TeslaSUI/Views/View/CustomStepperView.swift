@@ -5,11 +5,10 @@ import SwiftUI
 
 /// Кастомный степпер
 struct CustomStepperView: View {
-    
     // MARK: - Public properties
-        
+
     @Binding var value: Int
-    
+
     var body: some View {
         HStack {
             Button {
